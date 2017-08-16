@@ -27,7 +27,7 @@ public class UserBase {
             System.out.println(" успешно создан");
         }
         catch (IOException e) {
-        System.out.println("Упс! Ошибочка!");
+            System.out.println("Упс! Ошибочка!");
         }
     }
 
@@ -50,7 +50,7 @@ public class UserBase {
                 if (iterator.next().getName().equals(nameForDelete)) iterator.remove();
         }
         catch (IOException e) {
-        System.out.println("Упс! Ошибочка!");
+            System.out.println("Упс! Ошибочка!");
         }
     }
 
@@ -73,8 +73,8 @@ public class UserBase {
                 }
             }
         }
-        catch(IOException e) {
-        System.out.println("Упс! Ошибочка!");
+        catch (IOException e) {
+            System.out.println("Упс! Ошибочка!");
         }
     }
 
@@ -106,7 +106,7 @@ public class UserBase {
                         flag=false;
                 }
             }
-            catch(NumberFormatException e) {
+            catch (NumberFormatException e) {
                 System.out.println("Ты дебил! И ввел не то!");
             }
         }
