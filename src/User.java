@@ -5,6 +5,8 @@ public class User {
     private String login;
     private String password;
 
+    public User(){
+    }
     public User(String name, String surname, String number, String login, String password){
         this.name=name;
         this.surname=surname;
