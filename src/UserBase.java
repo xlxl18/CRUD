@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -28,13 +27,10 @@ public class UserBase {
             System.out.print(user.getName());
             System.out.println(" успешно создан");
         }
-
         catch (IOException e){
         System.out.println("Упс! Ошибочка!");
         }
-
     }
-
 
     private static void viewUser() {
         for (User user : list) {
@@ -54,7 +50,6 @@ public class UserBase {
             for (Iterator<User> iterator = list.iterator(); iterator.hasNext(); )
                 if (iterator.next().getName().equals(nameForDelete)) iterator.remove();
         }
-
         catch (IOException e) {
         System.out.println("Упс! Ошибочка!");
         }
@@ -76,7 +71,6 @@ public class UserBase {
                     object.setLogin(reader.readLine());
                     System.out.println("Введите пароль:");
                     object.setPassword(reader.readLine());
-
                 }
             }
         }
@@ -85,14 +79,13 @@ public class UserBase {
         }
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         boolean flag = true;
         while (flag = true) {
             System.out.println("Добрый день, добро пожаловать в мою программу.\n Что вы хотите сделать?\n1.Создать пользователя;\n2.Просмотреть всех пользователей;\n3.Удалить пользователя;\n4.Изменить пользователя;\n5.Выйти из программы.");
             try {
                 int answer = Integer.parseInt(reader.readLine());
-
                 switch (answer) {
                     case 1:
                         createUser();
