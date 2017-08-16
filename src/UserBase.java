@@ -9,7 +9,6 @@ public class UserBase {
     private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     private static ArrayList<User> list = new ArrayList<User>();
 
-
     private static void  createUser()  {
         try {
             String name, surname, login, password, number;
@@ -31,7 +30,7 @@ public class UserBase {
         }
 
         catch (IOException e){
-
+        System.out.println("Упс! Ошибочка!");
         }
 
     }
@@ -48,27 +47,24 @@ public class UserBase {
         }
     }
 
-
     private static void removeUser() {
         try {
             System.out.println("Введите имя пользователя, которого хотите удалить.");
-
             String nameForDelete = reader.readLine();
             for (Iterator<User> iterator = list.iterator(); iterator.hasNext(); )
                 if (iterator.next().getName().equals(nameForDelete)) iterator.remove();
         }
 
         catch (IOException e) {
-
+        System.out.println("Упс! Ошибочка!");
         }
     }
-
 
     private static void modifyUser(){
         try {
             System.out.println("Введите имя пользователя, которого хотите редактировать.");
             String nameForModify = reader.readLine();
-            for (User object : list) {
+            for (User user : list) {
                 if (nameForModify.equals(object.getName())) {
                     System.out.println("Введите имя:");
                     object.setName(reader.readLine());
@@ -84,18 +80,14 @@ public class UserBase {
                 }
             }
         }
-
         catch(IOException e){
-
+        System.out.println("Упс! Ошибочка!");
         }
     }
 
-
     public static void main(String[] args) throws Exception {
-
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         boolean flag = true;
-
         while (flag = true) {
             System.out.println("Добрый день, добро пожаловать в мою программу.\n Что вы хотите сделать?\n1.Создать пользователя;\n2.Просмотреть всех пользователей;\n3.Удалить пользователя;\n4.Изменить пользователя;\n5.Выйти из программы.");
             try {
@@ -120,15 +112,11 @@ public class UserBase {
                     default:
                         System.out.println("Вы ввели неправильный номер команды. Пожалуйста попробуйте еще раз!");
                         flag=false;
-
                 }
-
             }
-
             catch(NumberFormatException e){
                 System.out.println("Ты дебил! И ввел не то!");
             }
         }
     }
-
 }
