@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class UserBase {
     private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     private static ArrayList<User> list = new ArrayList<User>();
-    private static void  createUser()  {
+    private static void  createUser() {
         try {
             String name, surname, login, password, number;
             System.out.println("Введите имя:");
@@ -26,7 +26,7 @@ public class UserBase {
             System.out.print(user.getName());
             System.out.println(" успешно создан");
         }
-        catch (IOException e){
+        catch (IOException e) {
         System.out.println("Упс! Ошибочка!");
         }
     }
@@ -54,7 +54,7 @@ public class UserBase {
         }
     }
 
-    private static void modifyUser(){
+    private static void modifyUser() {
         try {
             System.out.println("Введите имя пользователя, которого хотите редактировать.");
             String nameForModify = reader.readLine();
@@ -73,7 +73,7 @@ public class UserBase {
                 }
             }
         }
-        catch(IOException e){
+        catch(IOException e) {
         System.out.println("Упс! Ошибочка!");
         }
     }
@@ -106,7 +106,7 @@ public class UserBase {
                         flag=false;
                 }
             }
-            catch(NumberFormatException e){
+            catch(NumberFormatException e) {
                 System.out.println("Ты дебил! И ввел не то!");
             }
         }
