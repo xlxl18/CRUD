@@ -7,7 +7,6 @@ import java.util.Iterator;
 public class UserBase {
     private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     private static ArrayList<User> list = new ArrayList<User>();
-
     private static void  createUser()  {
         try {
             String name, surname, login, password, number;
